@@ -3,7 +3,7 @@ import {expect} from 'chai';
 import fs from 'fs';
 import PDFDocument from 'pdfkit';
 import { Parser } from 'commonmark';
-import CommonmarkPDFRenderer from '../src/commonmark-pdfkit-renderer';
+import CommonmarkPDFRenderer from '../src/index';
 import * as TestUtils from './test-utils';
 
 describe('dimensionsOfMarkdown', function () {

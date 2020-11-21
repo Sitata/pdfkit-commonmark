@@ -1,7 +1,10 @@
+node_modules
+.vscode
+dist
+backup
 
 /npm-debug.log
 /.idea/
-/node_modules/
 /.nyc_output/
 /coverage/
 /test/

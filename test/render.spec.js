@@ -5,7 +5,7 @@ import chai, {expect} from 'chai';
 import chaiFS from 'chai-fs';
 import PDFDocument from 'pdfkit';
 import { Parser } from 'commonmark';
-import CommonmarkPDFRenderer from '../src/commonmark-pdfkit-renderer';
+import CommonmarkPDFRenderer from '../src/index';
 import * as TestUtils from './test-utils';
 
 
@@ -38,8 +38,8 @@ This is ***strong and emphasized***.
 
 ### Links (Level 3)
 
-This is [a link](https://www.example.com) within some text. Or another emphasized *[link](#)*. This time we 
-format [only **a part** of the string as **strong**](#). 
+This is [a link](https://www.example.com) within some text. Or another emphasized *[link](#)*. This time we
+format [only **a part** of the string as **strong**](#).
 
 #### Heading 4
 
@@ -172,15 +172,15 @@ JavaScript reference implementation.
 
 # Two nested unordered lists
 
-- List 1, Item 1  
+- List 1, Item 1
 - List 1, Item 2
-   - List 2, Item 1  
+   - List 2, Item 1
    - List 2, Item 2
 - List 1, Item 3
 
 # Two nested ordered lists
 
-1. List 1, Item 1  
+1. List 1, Item 1
 2. List 1, Item 2
    1. List 2, Item 1
    2. List 2, Item 2
@@ -214,28 +214,28 @@ JavaScript reference implementation.
 
 # Two nested unordered lists with linebreaks
 
-- List 1, Item 1  
+- List 1, Item 1
   Multiline_1-1
-- List 1, Item 2  
+- List 1, Item 2
   Multiline_1-2
-   - List 2, Item 1  
+   - List 2, Item 1
   Multiline_2-1
-   - List 2, Item 2  
+   - List 2, Item 2
   Multiline_2-2
-- List 1, Item 3  
+- List 1, Item 3
   Multiline_1-3
 
 # Two nested ordered lists
 
-1. List 1, Item 1  
+1. List 1, Item 1
   **Multiline_1-1**
-2. List 1, Item 2  
+2. List 1, Item 2
   Multiline_1-2
-   1. List 2, Item 1  
+   1. List 2, Item 1
   Multiline_2-1
-   2. List 2, Item 2  
+   2. List 2, Item 2
   Multiline_2-2
-3. List 1, Item 3  
+3. List 1, Item 3
   Multiline_1-3
 
 `);
@@ -270,10 +270,10 @@ This is __strong__. This is _emphasized_.
 
 This is ***strong and emphasized***.
 
-This is a forced  
-linebreak. While 
-the following linebreaks 
-will not be visible 
+This is a forced
+linebreak. While
+the following linebreaks
+will not be visible
 later.
 
 `);
@@ -322,11 +322,11 @@ later.
 
         const parsed = reader.parse(`
 
-Multiple **strong**  
-forced  
-[linebreaks](https://www.example.com)  
-over  
-six  
+Multiple **strong**
+forced
+[linebreaks](https://www.example.com)
+over
+six
 lines.
 
 `);
