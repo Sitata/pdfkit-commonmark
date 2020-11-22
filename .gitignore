@@ -1,6 +1,5 @@
 node_modules
 .vscode
-dist
 backup
 
 /npm-debug.log
