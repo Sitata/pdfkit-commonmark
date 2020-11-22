@@ -15,7 +15,6 @@
     "dist/typings/"
   ],
   "license": "MIT",
-  "bin": "dist/cli.js",
   "scripts": {
     "start": "rollup -c --watch --environment SERVE:true",
     "build": "npm run test && rollup -c",
